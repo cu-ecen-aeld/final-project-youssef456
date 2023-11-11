@@ -29,6 +29,7 @@ layer_info=$?
 if [ $layer_info -ne 0 ];then
 	echo "Adding meta-aesd layer"
 	bitbake-layers add-layer ../meta-aesd
+
 else
 	echo "meta-aesd layer already exists"
 fi
