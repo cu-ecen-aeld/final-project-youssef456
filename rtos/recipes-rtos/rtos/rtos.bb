@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 SRC_URI = "git://github.com/youssef456/RTOS_Embedded_Linux.git;protocol=ssh;branch=main"
 
-SRCREV = "9cd54a384a1b80adf18642acc801e9fa74517983"
+SRCREV = "290c9ac0fecfe038dd561256e0339d397bb525c8"
 
 PV = "1.0+git${SRCPV}"
 
@@ -23,6 +23,8 @@ INITSCRIPT_PACKAGES = "${PN}"
 
 # Skip creating debug information for the rtos binary
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
+
+STRIP = "${HOST_SYS}-strip"
 
 INITSCRIPT_NAME = "rtos-start-stop.sh"
 
